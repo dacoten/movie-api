@@ -66,11 +66,11 @@ CONSTRAINT `FKhfh9dx7w3ubf1co1vdev94g3f` FOREIGN KEY (`user_id`) REFERENCES `use
 
 ## Default Roles
 
-The spring boot app uses role based authorization powered by spring security. To add the default roles in the database, you should run command after running the application -
+The spring boot app uses role based authorization powered by spring security. To add the default roles in the database, you should run command after running the application:
 
-    ```sql
+```sql
     INSERT IGNORE INTO roles(name) VALUES('ROLE_USER');
     INSERT IGNORE INTO roles(name) VALUES('ROLE_ADMIN');
-    ```
+```
 
 Any new user who signs up to the app is assigned the `ROLE_USER` by default.
